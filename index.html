@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Goodfeed</title>
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Goodfeed">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#fafafa">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0c0c0d">
+<style>
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('fonts/satoshi-400.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('fonts/satoshi-500.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('fonts/satoshi-700.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Bricolage';
+    src: url('fonts/bricolage-600.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Geist Mono';
+    src: url('fonts/geist-mono.woff2') format('woff2');
+    font-weight: 100 900;
+    font-display: swap;
+  }
+
+  :root {
+    --bg: #fafafa;
+    --surface: #ffffff;
+    --line: #e4e4e7;
+    --line-strong: #d4d4d8;
+    --text: #18181b;
+    --text-2: #52525b;
+    --text-3: #6e6e76;
+    --accent: #c94f1d;
+    --accent-soft: rgba(201, 79, 29, 0.09);
+    --shadow: 0 1px 2px rgba(24, 24, 27, 0.04);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0c0c0d;
+      --surface: #141416;
+      --line: #232327;
+      --line-strong: #2e2e33;
+      --text: #f4f4f5;
+      --text-2: #b3b3bc;
+      --text-3: #8e8e98;
+      --accent: #e8632c;
+      --accent-soft: rgba(232, 99, 44, 0.12);
+      --shadow: none;
+    }
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Satoshi', sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .wrap { max-width: 600px; margin: 0 auto; padding: 0 16px 96px; }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0 14px;
+    position: sticky;
+    top: 0;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line);
+    z-index: 10;
+    padding-top: calc(20px + env(safe-area-inset-top));
+  }
+  .brand { display: flex; align-items: baseline; gap: 10px; }
+  .brand h1 { font-family: 'Bricolage', 'Satoshi', sans-serif; font-size: 22px; font-weight: 600; letter-spacing: -0.02em; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); align-self: center; }
+  #updated {
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px;
+    color: var(--text-3);
+  }
+  .head-right { display: flex; align-items: center; gap: 12px; }
+  #refresh {
+    display: flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px;
+    border: 1px solid var(--line-strong);
+    border-radius: 10px;
+    background: var(--surface);
+    color: var(--text-2);
+    cursor: pointer;
+  }
+  #refresh svg { width: 17px; height: 17px; }
+  #refresh.spinning svg { animation: spin 0.8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  #notice {
+    display: none;
+    margin: 14px 0 0;
+    padding: 10px 14px;
+    border: 1px solid var(--line-strong);
+    border-radius: 10px;
+    font-size: 13px;
+    color: var(--text-2);
+    background: var(--surface);
+  }
+  #notice.show { display: block; }
+
+  #feed { padding-top: 18px; display: grid; gap: 14px; }
+
+  article {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 16px 16px 12px;
+    box-shadow: var(--shadow);
+  }
+  article.voted-down { opacity: 0.38; }
+  article.voted-down .text { text-decoration: line-through; text-decoration-color: var(--text-3); }
+
+  .meta { display: flex; align-items: center; gap: 9px; margin-bottom: 10px; }
+  .src {
+    width: 15px; height: 15px; flex: none;
+    background-color: var(--text-3);
+    -webkit-mask: var(--logo) center / contain no-repeat;
+    mask: var(--logo) center / contain no-repeat;
+  }
+  .author { font-weight: 700; font-size: 16px; letter-spacing: -0.01em; }
+  .handle { color: var(--text-3); font-size: 13px; }
+  .when {
+    margin-left: auto;
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px;
+    color: var(--text-3);
+    flex: none;
+  }
+
+  .text { font-size: 16px; white-space: pre-line; word-wrap: break-word; }
+  .text a { color: var(--accent); text-decoration: none; }
+
+  .photo {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 12px;
+    border: 1px solid var(--line);
+    display: block;
+  }
+
+  .why {
+    display: flex; align-items: flex-start; gap: 8px;
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--text-3);
+    line-height: 1.45;
+  }
+  .score {
+    flex: none;
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 6px;
+    padding: 1px 7px;
+    margin-top: 1px;
+  }
+
+  .actions {
+    display: flex; align-items: center; gap: 4px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--line);
+  }
+  .actions button, .actions a {
+    display: flex; align-items: center; justify-content: center;
+    width: 40px; height: 34px;
+    border: none;
+    border-radius: 9px;
+    background: transparent;
+    color: var(--text-3);
+    cursor: pointer;
+  }
+  .actions svg { width: 18px; height: 18px; }
+  .actions .open { margin-left: auto; }
+  .actions button.on { color: var(--accent); background: var(--accent-soft); }
+
+  @media (prefers-reduced-motion: no-preference) {
+    article { transition: opacity 0.25s ease, transform 0.15s ease; }
+    .actions button, .actions a, #refresh { transition: background 0.15s ease, color 0.15s ease, transform 0.1s ease; }
+    .actions button:active, #refresh:active { transform: scale(0.94); }
+    @media (hover: hover) {
+      .actions button:hover, .actions a:hover { background: var(--accent-soft); color: var(--accent); }
+      #refresh:hover { color: var(--text); border-color: var(--text-3); }
+    }
+  }
+
+  .skeleton {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 16px;
+  }
+  .skeleton .bar {
+    height: 12px; border-radius: 6px;
+    background: var(--line);
+    margin-bottom: 10px;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .skeleton .bar { animation: pulse 1.4s ease-in-out infinite; }
+    @keyframes pulse { 50% { opacity: 0.45; } }
+  }
+
+  #empty {
+    display: none;
+    text-align: left;
+    padding: 56px 8px;
+    color: var(--text-2);
+  }
+  #empty.show { display: block; }
+  #empty .ring {
+    width: 44px; height: 44px;
+    border: 2px solid var(--line-strong);
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  #empty .ring::after {
+    content: '';
+    position: absolute;
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    top: -3px; right: -3px;
+  }
+  #empty p { font-size: 15px; max-width: 36ch; }
+  #empty .sub { font-size: 13px; color: var(--text-3); margin-top: 6px; }
+
+  footer {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: calc(16px + env(safe-area-inset-bottom));
+    z-index: 20;
+  }
+  #votebar {
+    display: none;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 9px 9px 16px;
+    background: var(--text);
+    color: var(--bg);
+    border-radius: 999px;
+    font-size: 13px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+    white-space: nowrap;
+  }
+  #votebar.show { display: flex; }
+  #votebar button {
+    border: none;
+    background: var(--bg);
+    color: var(--text);
+    font: 700 13px 'Satoshi', sans-serif;
+    border-radius: 999px;
+    padding: 6px 13px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <span class="dot"></span>
+      <h1>Goodfeed</h1>
+    </div>
+    <div class="head-right">
+      <span id="updated"></span>
+      <button id="refresh" aria-label="Reload feed">
+        <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M240,56v48a8,8,0,0,1-8,8H184a8,8,0,0,1,0-16h27.4L184.81,71.64l-.25-.24a80,80,0,1,0-1.67,114.78,8,8,0,0,1,11,11.63A95.44,95.44,0,0,1,128,224h-1.32A96,96,0,1,1,195.75,60L224,85.8V56a8,8,0,1,1,16,0Z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div id="notice"></div>
+
+  <div id="empty">
+    <div class="ring"></div>
+    <p>Nothing here yet.</p>
+    <p class="sub">Ask Claude on the Mac to refresh the feed, then reload.</p>
+  </div>
+
+  <main id="feed" aria-live="polite"></main>
+</div>
+
+<footer>
+  <div id="votebar">
+    <span id="votecount"></span>
+    <button id="copyvotes">Copy for Claude</button>
+  </div>
+</footer>
+
+<script>
+  var VOTE_ENDPOINT = '';   /* step 4: Google Form/Apps Script URL goes here */
+
+  var ICONS = {
+    up: 'M234,80.12A24,24,0,0,0,216,72H160V56a40,40,0,0,0-40-40,8,8,0,0,0-7.16,4.42L75.06,96H32a16,16,0,0,0-16,16v88a16,16,0,0,0,16,16H204a24,24,0,0,0,23.82-21l12-96A24,24,0,0,0,234,80.12ZM32,112H72v88H32ZM223.94,97l-12,96a8,8,0,0,1-7.94,7H88V105.89l36.71-73.43A24,24,0,0,1,144,56V80a8,8,0,0,0,8,8h64a8,8,0,0,1,7.94,9Z',
+    down: 'M239.82,157l-12-96A24,24,0,0,0,204,40H32A16,16,0,0,0,16,56v88a16,16,0,0,0,16,16H75.06l37.78,75.58A8,8,0,0,0,120,240a40,40,0,0,0,40-40V184h56a24,24,0,0,0,23.82-27ZM72,144H32V56H72Zm150,21.29a7.88,7.88,0,0,1-6,2.71H152a8,8,0,0,0-8,8v24a24,24,0,0,1-19.29,23.54L88,150.11V56H204a8,8,0,0,1,7.94,7l12,96A7.87,7.87,0,0,1,222,165.29Z',
+    open: 'M224,104a8,8,0,0,1-16,0V59.32l-66.33,66.34a8,8,0,0,1-11.32-11.32L196.68,48H152a8,8,0,0,1,0-16h64a8,8,0,0,1,8,8Zm-40,24a8,8,0,0,0-8,8v72H48V80h72a8,8,0,0,0,0-16H48A16,16,0,0,0,32,80V208a16,16,0,0,0,16,16H176a16,16,0,0,0,16-16V136A8,8,0,0,0,184,128Z'
+  };
+  var LOGOS = {
+    x: 'https://cdn.simpleicons.org/x/000000',
+    instagram: 'https://cdn.simpleicons.org/instagram/000000',
+    facebook: 'https://cdn.simpleicons.org/facebook/000000',
+    youtube: 'https://cdn.simpleicons.org/youtube/000000'
+  };
+
+  var feedEl = document.getElementById('feed');
+  var emptyEl = document.getElementById('empty');
+  var noticeEl = document.getElementById('notice');
+  var updatedEl = document.getElementById('updated');
+  var refreshBtn = document.getElementById('refresh');
+  var votebar = document.getElementById('votebar');
+  var votecount = document.getElementById('votecount');
+  var lastLoad = 0;
+
+  function votes() {
+    try { return JSON.parse(localStorage.getItem('gf_votes') || '{}'); }
+    catch (e) { return {}; }
+  }
+  function saveVotes(v) { localStorage.setItem('gf_votes', JSON.stringify(v)); refreshVotebar(); }
+
+  function refreshVotebar() {
+    var n = Object.keys(votes()).length;
+    votecount.textContent = n + (n === 1 ? ' vote saved' : ' votes saved');
+    votebar.classList.toggle('show', n > 0);
+  }
+
+  function timeAgo(iso) {
+    var diff = Date.now() - new Date(iso).getTime();
+    var h = Math.floor(diff / 3600000);
+    if (h < 1) return 'now';
+    if (h < 24) return h + 'h';
+    return Math.floor(h / 24) + 'd';
+  }
+
+  function svgBtn(path, label) {
+    return '<svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="' + path + '"/></svg>';
+  }
+
+  function esc(s) {
+    var d = document.createElement('div');
+    d.textContent = s || '';
+    return d.innerHTML;
+  }
+
+  function render(data) {
+    feedEl.innerHTML = '';
+    var posts = (data && data.posts) || [];
+    emptyEl.classList.toggle('show', posts.length === 0);
+    if (data && data.generated_at) {
+      updatedEl.textContent = 'updated ' + timeAgo(data.generated_at) + ' ago';
+      if (timeAgo(data.generated_at) === 'now') updatedEl.textContent = 'updated just now';
+    }
+    var v = votes();
+
+    posts.forEach(function (p) {
+      var a = document.createElement('article');
+      var logo = LOGOS[p.source] || LOGOS.x;
+      var myVote = v[p.permalink] && v[p.permalink].vote;
+      if (myVote === 'down') a.classList.add('voted-down');
+
+      a.innerHTML =
+        '<div class="meta">' +
+          '<span class="src" style="--logo:url(' + logo + ')"></span>' +
+          '<span class="author">' + esc(p.author) + '</span>' +
+          '<span class="handle">' + esc(p.handle || '') + '</span>' +
+          '<span class="when">' + (p.time ? timeAgo(p.time) : '') + '</span>' +
+        '</div>' +
+        '<div class="text">' + esc(p.text) + '</div>' +
+        (p.img ? '<img class="photo" loading="lazy" alt="" src="' + esc(p.img) + '">' : '') +
+        (p.why ? '<div class="why"><span class="score">' + p.score + '</span><span>' + esc(p.why) + '</span></div>' : '') +
+        '<div class="actions">' +
+          '<button class="vote" data-vote="up" aria-label="Good pick">' + svgBtn(ICONS.up) + '</button>' +
+          '<button class="vote" data-vote="down" aria-label="Bin it">' + svgBtn(ICONS.down) + '</button>' +
+          '<a class="open" href="' + esc(p.permalink) + '" target="_blank" rel="noopener" aria-label="Open original">' + svgBtn(ICONS.open) + '</a>' +
+        '</div>';
+
+      if (myVote) {
+        a.querySelector('[data-vote="' + myVote + '"]').classList.add('on');
+      }
+
+      a.querySelectorAll('.vote').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var kind = btn.dataset.vote;
+          var all = votes();
+          var current = all[p.permalink] && all[p.permalink].vote;
+          a.querySelectorAll('.vote').forEach(function (b) { b.classList.remove('on'); });
+          a.classList.remove('voted-down');
+          if (current === kind) {
+            delete all[p.permalink];
+          } else {
+            all[p.permalink] = {
+              vote: kind,
+              ts: new Date().toISOString(),
+              author: p.author,
+              snippet: (p.text || '').slice(0, 100)
+            };
+            btn.classList.add('on');
+            if (kind === 'down') a.classList.add('voted-down');
+            if (VOTE_ENDPOINT) {
+              try {
+                fetch(VOTE_ENDPOINT, { method: 'POST', mode: 'no-cors', body: JSON.stringify(all[p.permalink]) });
+              } catch (e) {}
+            }
+          }
+          saveVotes(all);
+        });
+      });
+
+      feedEl.appendChild(a);
+    });
+  }
+
+  function skeletons() {
+    feedEl.innerHTML = '';
+    for (var i = 0; i < 4; i++) {
+      var s = document.createElement('div');
+      s.className = 'skeleton';
+      s.innerHTML = '<div class="bar" style="width:42%"></div><div class="bar" style="width:96%"></div><div class="bar" style="width:88%"></div><div class="bar" style="width:55%;margin-bottom:0"></div>';
+      feedEl.appendChild(s);
+    }
+  }
+
+  function load(manual) {
+    lastLoad = Date.now();
+    if (manual) refreshBtn.classList.add('spinning');
+    if (!feedEl.children.length) skeletons();
+    fetch('feed.json?t=' + Date.now(), { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (data) {
+        noticeEl.classList.remove('show');
+        localStorage.setItem('gf_last_feed', JSON.stringify(data));
+        render(data);
+      })
+      .catch(function () {
+        var cached = null;
+        try { cached = JSON.parse(localStorage.getItem('gf_last_feed')); } catch (e) {}
+        if (cached) {
+          noticeEl.textContent = 'Could not reach the feed. Showing the last saved copy.';
+          noticeEl.classList.add('show');
+          render(cached);
+        } else {
+          feedEl.innerHTML = '';
+          emptyEl.classList.add('show');
+        }
+      })
+      .finally(function () { refreshBtn.classList.remove('spinning'); });
+  }
+
+  refreshBtn.addEventListener('click', function () { load(true); });
+
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'visible' && Date.now() - lastLoad > 300000) load(false);
+  });
+
+  document.getElementById('copyvotes').addEventListener('click', function () {
+    var payload = JSON.stringify(votes(), null, 2);
+    navigator.clipboard.writeText(payload).then(function () {
+      var btn = document.getElementById('copyvotes');
+      btn.textContent = 'Copied';
+      setTimeout(function () { btn.textContent = 'Copy for Claude'; }, 1600);
+    });
+  });
+
+  refreshVotebar();
+  load(false);
+</script>
+</body>
+</html>
