@@ -1,6 +1,18 @@
 {
-  "generated_at": "2026-06-11T08:00:00+10:00",
+  "generated_at": "2026-06-11T09:18:00+10:00",
   "posts": [
+    {
+      "id": "x-2064821943065296985",
+      "score": 8,
+      "source": "x",
+      "author": "Lorenzo",
+      "handle": "@lorenzo_pravata",
+      "text": "Full guide on ads that don't look like ads (for $1M months).\n\nOrganic ads, ugly ads, stealth ads, all are the same. But they all work in 2026. ONLY if they're created in order to fit into your customers' feed.",
+      "permalink": "https://x.com/lorenzo_pravata/status/2064821943065296985",
+      "time": "2026-06-10T21:00:00.000Z",
+      "img": null,
+      "why": "A full tactical guide on native-feeling ad creative. Directly useful for the Meta work."
+    },
     {
       "id": "x-2064818297313571321",
       "score": 8,
@@ -11,7 +23,55 @@
       "permalink": "https://x.com/FedotOff90/status/2064818297313571321",
       "time": "2026-06-10T21:00:00.000Z",
       "img": null,
-      "why": "Ads tactics with real substance: specific claim about a format that holds spend, plus a swipe file."
+      "why": "Ads tactics with real substance: a specific format claim plus a swipe file."
+    },
+    {
+      "id": "x-2064846385560555814",
+      "score": 7,
+      "source": "x",
+      "author": "Max Sturtevant",
+      "handle": "@maxwellcopy",
+      "text": "We've been working on custom dashboards that show retention data you literally cannot see inside of Shopify, Klaviyo, Recharge, Skio, etc.\n\nFor example this view right here tracks cohort LTV broken down by whatever you want: product, customer tag, discount code, etc.",
+      "permalink": "https://x.com/maxwellcopy/status/2064846385560555814",
+      "time": "2026-06-10T23:00:00.000Z",
+      "img": null,
+      "why": "Retention and cohort-LTV visibility beyond what Shopify and Klaviyo show. Relevant to all three stores."
+    },
+    {
+      "id": "x-2064838215782355251",
+      "score": 7,
+      "source": "x",
+      "author": "DTC Newsletter",
+      "handle": "@DTCNewsletter",
+      "text": "Having a good tech stack is important.\n\nThis episode, we're taking you to the Whalies Panel with Justin Parker (Origin), Ashley Kick (DOEN), and Martha Ann Pavoni (Universal Ads). Justin unpacks how their brands are embedding Triple Whale's Moby AI across the commerce stack.",
+      "permalink": "https://x.com/DTCNewsletter/status/2064838215782355251",
+      "time": "2026-06-10T22:00:00.000Z",
+      "img": "https://pbs.twimg.com/amplify_video_thumb/2064838145808662528/img/wxKB54dmuE6AXybk.jpg",
+      "why": "AI embedded in the ecommerce stack, discussed by operators running real brands."
+    },
+    {
+      "id": "x-2064813146729050535",
+      "score": 7,
+      "source": "x",
+      "author": "Alex Fedotoff",
+      "handle": "@FedotOff90",
+      "text": "MFers that listen to me are printing.\n\n154 active ads in Mexico. Selling a validated in the USA supplement product: Astaxanthin.\n\nBasic bitch product page. Find the product, adapt to your market, print.",
+      "permalink": "https://x.com/FedotOff90/status/2064813146729050535",
+      "time": "2026-06-10T20:00:00.000Z",
+      "img": null,
+      "why": "Concrete market-arbitrage play with numbers. Pitchy for his tool, but the tactic stands alone."
+    },
+    {
+      "id": "x-2064806631716565170",
+      "score": 7,
+      "source": "x",
+      "author": "Lorenzo",
+      "handle": "@lorenzo_pravata",
+      "text": "hired a media buyer. sharp kid. spent his whole first month learning our launch process, has spent every month since just running it.\n\nThought a better SOP would make him more efficient. So I wrote one (38 pages).\n\nHe hasn't even opened it.\n\n\"your process becomes code that",
+      "permalink": "https://x.com/lorenzo_pravata/status/2064806631716565170",
+      "time": "2026-06-10T20:00:00.000Z",
+      "img": "https://pbs.twimg.com/amplify_video_thumb/2064777230665003008/img/iH-W9rLWsdtCGsNT.jpg",
+      "why": "Process-as-code over SOP documents. Speaks straight to the AI-agent business."
     },
     {
       "id": "x-2064801222775959576",
@@ -23,7 +83,7 @@
       "permalink": "https://x.com/Seanfrank/status/2064801222775959576",
       "time": "2026-06-10T20:00:00.000Z",
       "img": "https://pbs.twimg.com/amplify_video_thumb/2064800655097962496/img/Si-TrDwWLet-6lpo.jpg",
-      "why": "DTC founder satire of course-seller slop. Borderline keep, useful for calibrating the satire rule."
+      "why": "DTC founder satire of course-seller slop. Borderline keep, vote it to calibrate the satire rule."
     }
   ]
 }
