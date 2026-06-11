@@ -1,29 +1,53 @@
 {
-  "generated_at": "2026-06-11T12:05:00+10:00",
+  "generated_at": "2026-06-11T16:55:00+10:00",
   "posts": [
     {
-      "id": "x-2064821943065296985",
+      "id": "blog-wlw-ai-quality",
       "score": 8,
-      "source": "x",
-      "author": "Lorenzo",
-      "handle": "@lorenzo_pravata",
-      "text": "Full guide on ads that don't look like ads (for $1M months).\n\nOrganic ads, ugly ads, stealth ads, all are the same. But they all work in 2026. ONLY if they're created in order to fit into your customers' feed.",
-      "permalink": "https://x.com/lorenzo_pravata/status/2064821943065296985",
-      "time": "2026-06-10T21:28:00.000Z",
+      "source": "blog",
+      "author": "Warning Letter Wednesday",
+      "handle": "Newsletter",
+      "text": "AI & Quality Related Warning Letter\n\nWeekly teardown of a real FDA enforcement action against a supplement company, this one involving AI-generated claims and quality systems.",
+      "permalink": "https://warningletterwednesday.com/ai-quality-related-warning-letter/",
+      "time": "2026-06-10T14:00:00.000Z",
       "img": null,
-      "why": "You upvoted this. Full tactical guide on native-feeling ad creative."
+      "why": "NEW SOURCE. Settl compliance gold: how regulators are treating AI-written supplement claims, taught through a real enforcement letter."
     },
     {
-      "id": "x-2064818297313571321",
+      "id": "blog-nate-claude-codex",
       "score": 8,
-      "source": "x",
-      "author": "Alex Fedotoff",
-      "handle": "@FedotOff90",
-      "text": "NOTHING holds spend like VSLs on Facebook.\n\nMost ads will never survive the testing phase.\n\n99% of the ads you test will never spend more than $10k at KPI.\n\nVSL's can spend $50-$100K+. Return of time/resources is definitely positive. Swipe file of VSL bangers below, enjoy",
-      "permalink": "https://x.com/FedotOff90/status/2064818297313571321",
-      "time": "2026-06-10T21:13:39.000Z",
+      "source": "blog",
+      "author": "Nate's Newsletter",
+      "handle": "Newsletter",
+      "text": "Claude vs. Codex isn't about code. It's about whether you steer or dispatch.\n\nImplementation-level take on choosing and running AI agents: when you steer one agent closely vs dispatch many.",
+      "permalink": "https://natesnewsletter.substack.com/p/claude-code-vs-codex-agents",
+      "time": "2026-06-10T13:00:00.000Z",
       "img": null,
-      "why": "You upvoted this. Specific FB ad-format claim plus a swipe file."
+      "why": "NEW SOURCE. Directly about how you run Claude day-to-day and what you'll sell clients."
+    },
+    {
+      "id": "blog-mollick-mythos",
+      "score": 8,
+      "source": "blog",
+      "author": "One Useful Thing",
+      "handle": "Ethan Mollick",
+      "text": "What it feels like to work with Mythos\n\nMollick's hands-on read of the newest frontier model: what it changes about delegating real work to AI, with his usual evidence-over-hype approach.",
+      "permalink": "https://www.oneusefulthing.org/p/what-it-feels-like-to-work-with-mythos",
+      "time": "2026-06-09T17:00:00.000Z",
+      "img": null,
+      "why": "NEW SOURCE. The most trusted practical-AI voice on what the latest model actually does for work."
+    },
+    {
+      "id": "blog-sciencesays-ai-messages",
+      "score": 8,
+      "source": "blog",
+      "author": "Science Says",
+      "handle": "Newsletter",
+      "text": "When AI-written messages backfire\n\nPeer-reviewed research on when customers react badly to AI-written communication, and when they don't, distilled into a 3-minute tactic.",
+      "permalink": "https://app.sciencesays.com/p/when-ai-written-messages-backfire",
+      "time": "2026-06-09T10:00:00.000Z",
+      "img": null,
+      "why": "NEW SOURCE. You send AI-written messages across four businesses; this is the evidence on where that costs you."
     },
     {
       "id": "yt-3BatQW63C8g",
@@ -35,7 +59,19 @@
       "permalink": "https://www.youtube.com/watch?v=3BatQW63C8g",
       "time": "2026-06-08T06:00:00.000Z",
       "img": "https://i.ytimg.com/vi/3BatQW63C8g/hqdefault.jpg",
-      "why": "NEW SOURCE: YouTube. Solo AI-agency build, directly your agent venture. First video through the RSS lane."
+      "why": "Solo AI-agency build, directly your agent venture. Still unvoted; tell me if this earns its slot."
+    },
+    {
+      "id": "x-2064920364593946860",
+      "score": 7,
+      "source": "x",
+      "author": "Jackson Blackledge",
+      "handle": "@blvckledge",
+      "text": "google's making another big move on chat commerce\n\nthey launched 3 new ad formats in ai mode and search\n\n1. conversational discovery ads: embedded inside ai mode's responses\n\n2. highlighted answers: appear inside ai mode's recommendation lists.\n\n3. ai-powered shopping ads",
+      "permalink": "https://x.com/blvckledge/status/2064920364593946860",
+      "time": "2026-06-11T03:00:00.000Z",
+      "img": null,
+      "why": "Google's new AI-mode ad formats, concrete and fresh. Relevant to the stores' Google spend. His follow-up promo link got binned; this stands alone."
     },
     {
       "id": "yt-2lE1-5hBfKk",
@@ -47,7 +83,7 @@
       "permalink": "https://www.youtube.com/watch?v=2lE1-5hBfKk",
       "time": "2026-06-11T01:00:00.000Z",
       "img": "https://i.ytimg.com/vi/2lE1-5hBfKk/hqdefault.jpg",
-      "why": "Freshest AI commentary from a solid channel. Capped at one Wolfe per feed; his shorts get samey."
+      "why": "Video companion to the Mollick essay above; same model, different lens."
     },
     {
       "id": "x-2064851352472392128",
@@ -59,43 +95,19 @@
       "permalink": "https://x.com/coreyganim/status/2064851352472392128",
       "time": "2026-06-10T23:25:00.000Z",
       "img": "https://pbs.twimg.com/media/HKSNBTyWwAAn4-w?format=jpg&name=900x900",
-      "why": "13-persona AI focus group that reviews ad copy. Wording is engagement-baity; vote it to teach me whether baity framing kills an on-topic post."
+      "why": "13-persona AI focus group for ad copy. Still unvoted; the wording is baity, your vote calibrates that rule."
     },
     {
-      "id": "x-2064846385560555814",
+      "id": "blog-loomer-push-delivery",
       "score": 7,
-      "source": "x",
-      "author": "Max Sturtevant",
-      "handle": "@maxwellcopy",
-      "text": "We've been working on custom dashboards that show retention data you literally cannot see inside of Shopify, Klaviyo, Recharge, Skio, etc.\n\nFor example this view right here tracks cohort LTV broken down by whatever you want: product, customer tag, discount code, etc.",
-      "permalink": "https://x.com/maxwellcopy/status/2064846385560555814",
-      "time": "2026-06-10T23:05:15.000Z",
+      "source": "blog",
+      "author": "Jon Loomer",
+      "handle": "Blog",
+      "text": "Hands-On With Push Delivery to This Ad\n\nLoomer tests Meta's new push-delivery option in his own account: what it does, where it shows up, and what to watch before using it.",
+      "permalink": "https://www.jonloomer.com/hands-on-push-delivery-to-this-ad/",
+      "time": "2026-06-09T11:00:00.000Z",
       "img": null,
-      "why": "You upvoted this. Retention and cohort-LTV visibility beyond Shopify/Klaviyo."
-    },
-    {
-      "id": "x-2064813146729050535",
-      "score": 7,
-      "source": "x",
-      "author": "Alex Fedotoff",
-      "handle": "@FedotOff90",
-      "text": "MFers that listen to me are printing.\n\n154 active ads in Mexico. Selling a validated in the USA supplement product: Astaxanthin.\n\nBasic bitch product page. Find the product, adapt to your market, print.",
-      "permalink": "https://x.com/FedotOff90/status/2064813146729050535",
-      "time": "2026-06-10T20:53:11.000Z",
-      "img": null,
-      "why": "You upvoted this. Concrete market-arbitrage play with numbers."
-    },
-    {
-      "id": "x-2064806631716565170",
-      "score": 7,
-      "source": "x",
-      "author": "Lorenzo",
-      "handle": "@lorenzo_pravata",
-      "text": "hired a media buyer. sharp kid. spent his whole first month learning our launch process, has spent every month since just running it.\n\nThought a better SOP would make him more efficient. So I wrote one (38 pages).\n\nHe hasn't even opened it.\n\n\"your process becomes code that",
-      "permalink": "https://x.com/lorenzo_pravata/status/2064806631716565170",
-      "time": "2026-06-10T20:27:17.000Z",
-      "img": "https://pbs.twimg.com/amplify_video_thumb/2064777230665003008/img/iH-W9rLWsdtCGsNT.jpg",
-      "why": "You upvoted this. Process-as-code over SOP docs; speaks to the AI-agent business."
+      "why": "NEW SOURCE. The fastest independent read on Ads Manager changes before they hit your four accounts."
     },
     {
       "id": "yt-ClvrW0pcYqg",
@@ -107,7 +119,31 @@
       "permalink": "https://www.youtube.com/watch?v=ClvrW0pcYqg",
       "time": "2026-06-09T19:00:00.000Z",
       "img": "https://i.ytimg.com/vi/ClvrW0pcYqg/hqdefault.jpg",
-      "why": "Snow bucket finally has content. Proper board-craft build, not a 15-second short."
+      "why": "Board-craft build. Still unvoted."
+    },
+    {
+      "id": "blog-foxwell-attribution",
+      "score": 7,
+      "source": "blog",
+      "author": "Foxwell Digital",
+      "handle": "Blog",
+      "text": "Cracking the Code: Understanding Attribution Windows in Digital Marketing\n\nWhat 1-day vs 7-day click attribution actually tells you, and how senior buyers set windows by objective.",
+      "permalink": "https://www.foxwelldigital.com/blog/cracking-the-code-understanding-attribution-windows-in-digital-marketing",
+      "time": "2026-06-08T18:00:00.000Z",
+      "img": null,
+      "why": "NEW SOURCE. Attribution windows trip up every multi-account advertiser; this is the grounded version."
+    },
+    {
+      "id": "blog-loomer-segments",
+      "score": 7,
+      "source": "blog",
+      "author": "Jon Loomer",
+      "handle": "Blog",
+      "text": "Common Audience Segments Failures\n\nWhere advertisers get audience segments wrong in the Advantage+ era, and what to do instead.",
+      "permalink": "https://www.jonloomer.com/qvt/audience-segments-failures/",
+      "time": "2026-06-07T11:00:00.000Z",
+      "img": null,
+      "why": "NEW SOURCE. Audience-segment mistakes in the Advantage+ era; applies to every account you run."
     },
     {
       "id": "yt-aok3rDuRw8c",
@@ -119,7 +155,7 @@
       "permalink": "https://www.youtube.com/watch?v=aok3rDuRw8c",
       "time": "2026-06-05T17:00:00.000Z",
       "img": "https://i.ytimg.com/vi/aok3rDuRw8c/hqdefault.jpg",
-      "why": "Ski tutorial with real instruction. AU season is opening; timely."
+      "why": "Ski tutorial, AU season opening. Still unvoted."
     },
     {
       "id": "yt-a8O1iG96kTU",
@@ -131,7 +167,7 @@
       "permalink": "https://www.youtube.com/watch?v=a8O1iG96kTU",
       "time": "2026-06-04T16:00:00.000Z",
       "img": "https://i.ytimg.com/vi/a8O1iG96kTU/hqdefault.jpg",
-      "why": "Snowboard technique with substance. Their Ollie shorts got binned as filler."
+      "why": "Snowboard technique with substance. Still unvoted."
     }
   ]
 }
