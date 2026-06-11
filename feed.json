@@ -1,30 +1,6 @@
 {
-  "generated_at": "2026-06-11T11:42:00+10:00",
+  "generated_at": "2026-06-11T12:05:00+10:00",
   "posts": [
-    {
-      "id": "x-2064851352472392128",
-      "score": 7,
-      "source": "x",
-      "author": "Corey Ganim",
-      "handle": "@coreyganim",
-      "text": "My friend @IMJustinBrooke made $260K off this workflow.\n\nI'm giving you the full playbook for free.\n\nBookmark this.",
-      "permalink": "https://x.com/coreyganim/status/2064851352472392128",
-      "time": "2026-06-10T23:25:00.000Z",
-      "img": "https://pbs.twimg.com/media/HKSNBTyWwAAn4-w?format=jpg&name=900x900",
-      "why": "NEW. The attached framework is a 13-persona AI focus group that reviews ad copy and picks a winner. Squarely AI-agents + ads. Heads up: the wording is engagement-baity. Vote it to tell me whether baity framing kills an otherwise on-topic post."
-    },
-    {
-      "id": "x-2064846385560555814",
-      "score": 7,
-      "source": "x",
-      "author": "Max Sturtevant",
-      "handle": "@maxwellcopy",
-      "text": "We've been working on custom dashboards that show retention data you literally cannot see inside of Shopify, Klaviyo, Recharge, Skio, etc.\n\nFor example this view right here tracks cohort LTV broken down by whatever you want: product, customer tag, discount code, etc.",
-      "permalink": "https://x.com/maxwellcopy/status/2064846385560555814",
-      "time": "2026-06-10T23:05:15.000Z",
-      "img": null,
-      "why": "You upvoted this. Retention and cohort-LTV visibility beyond Shopify/Klaviyo."
-    },
     {
       "id": "x-2064821943065296985",
       "score": 8,
@@ -50,6 +26,54 @@
       "why": "You upvoted this. Specific FB ad-format claim plus a swipe file."
     },
     {
+      "id": "yt-3BatQW63C8g",
+      "score": 8,
+      "source": "youtube",
+      "author": "Liam Ottley",
+      "handle": "YouTube",
+      "text": "Start a $10,000/mo Solo AI Creative Agency (Higgsfield + Claude)",
+      "permalink": "https://www.youtube.com/watch?v=3BatQW63C8g",
+      "time": "2026-06-08T06:00:00.000Z",
+      "img": "https://i.ytimg.com/vi/3BatQW63C8g/hqdefault.jpg",
+      "why": "NEW SOURCE: YouTube. Solo AI-agency build, directly your agent venture. First video through the RSS lane."
+    },
+    {
+      "id": "yt-2lE1-5hBfKk",
+      "score": 7,
+      "source": "youtube",
+      "author": "Matt Wolfe",
+      "handle": "YouTube",
+      "text": "The Truth About Anthropic's Mythos",
+      "permalink": "https://www.youtube.com/watch?v=2lE1-5hBfKk",
+      "time": "2026-06-11T01:00:00.000Z",
+      "img": "https://i.ytimg.com/vi/2lE1-5hBfKk/hqdefault.jpg",
+      "why": "Freshest AI commentary from a solid channel. Capped at one Wolfe per feed; his shorts get samey."
+    },
+    {
+      "id": "x-2064851352472392128",
+      "score": 7,
+      "source": "x",
+      "author": "Corey Ganim",
+      "handle": "@coreyganim",
+      "text": "My friend @IMJustinBrooke made $260K off this workflow.\n\nI'm giving you the full playbook for free.\n\nBookmark this.",
+      "permalink": "https://x.com/coreyganim/status/2064851352472392128",
+      "time": "2026-06-10T23:25:00.000Z",
+      "img": "https://pbs.twimg.com/media/HKSNBTyWwAAn4-w?format=jpg&name=900x900",
+      "why": "13-persona AI focus group that reviews ad copy. Wording is engagement-baity; vote it to teach me whether baity framing kills an on-topic post."
+    },
+    {
+      "id": "x-2064846385560555814",
+      "score": 7,
+      "source": "x",
+      "author": "Max Sturtevant",
+      "handle": "@maxwellcopy",
+      "text": "We've been working on custom dashboards that show retention data you literally cannot see inside of Shopify, Klaviyo, Recharge, Skio, etc.\n\nFor example this view right here tracks cohort LTV broken down by whatever you want: product, customer tag, discount code, etc.",
+      "permalink": "https://x.com/maxwellcopy/status/2064846385560555814",
+      "time": "2026-06-10T23:05:15.000Z",
+      "img": null,
+      "why": "You upvoted this. Retention and cohort-LTV visibility beyond Shopify/Klaviyo."
+    },
+    {
       "id": "x-2064813146729050535",
       "score": 7,
       "source": "x",
@@ -72,6 +96,42 @@
       "time": "2026-06-10T20:27:17.000Z",
       "img": "https://pbs.twimg.com/amplify_video_thumb/2064777230665003008/img/iH-W9rLWsdtCGsNT.jpg",
       "why": "You upvoted this. Process-as-code over SOP docs; speaks to the AI-agent business."
+    },
+    {
+      "id": "yt-ClvrW0pcYqg",
+      "score": 7,
+      "source": "youtube",
+      "author": "Burton",
+      "handle": "YouTube",
+      "text": "Making a Gold Burton Snowboard",
+      "permalink": "https://www.youtube.com/watch?v=ClvrW0pcYqg",
+      "time": "2026-06-09T19:00:00.000Z",
+      "img": "https://i.ytimg.com/vi/ClvrW0pcYqg/hqdefault.jpg",
+      "why": "Snow bucket finally has content. Proper board-craft build, not a 15-second short."
+    },
+    {
+      "id": "yt-aok3rDuRw8c",
+      "score": 7,
+      "source": "youtube",
+      "author": "Stomp It Tutorials",
+      "handle": "YouTube",
+      "text": "How to 180 on Skis | Common Mistakes",
+      "permalink": "https://www.youtube.com/watch?v=aok3rDuRw8c",
+      "time": "2026-06-05T17:00:00.000Z",
+      "img": "https://i.ytimg.com/vi/aok3rDuRw8c/hqdefault.jpg",
+      "why": "Ski tutorial with real instruction. AU season is opening; timely."
+    },
+    {
+      "id": "yt-a8O1iG96kTU",
+      "score": 7,
+      "source": "youtube",
+      "author": "SnowboardProCamp",
+      "handle": "YouTube",
+      "text": "How To Snowboard with More CONFIDENCE",
+      "permalink": "https://www.youtube.com/watch?v=a8O1iG96kTU",
+      "time": "2026-06-04T16:00:00.000Z",
+      "img": "https://i.ytimg.com/vi/a8O1iG96kTU/hqdefault.jpg",
+      "why": "Snowboard technique with substance. Their Ollie shorts got binned as filler."
     }
   ]
 }
