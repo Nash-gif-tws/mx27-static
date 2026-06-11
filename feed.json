@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T16:55:00+10:00",
+  "generated_at": "2026-06-11T17:10:00+10:00",
   "posts": [
     {
       "id": "blog-wlw-ai-quality",
@@ -110,18 +110,6 @@
       "why": "NEW SOURCE. The fastest independent read on Ads Manager changes before they hit your four accounts."
     },
     {
-      "id": "yt-ClvrW0pcYqg",
-      "score": 7,
-      "source": "youtube",
-      "author": "Burton",
-      "handle": "YouTube",
-      "text": "Making a Gold Burton Snowboard",
-      "permalink": "https://www.youtube.com/watch?v=ClvrW0pcYqg",
-      "time": "2026-06-09T19:00:00.000Z",
-      "img": "https://i.ytimg.com/vi/ClvrW0pcYqg/hqdefault.jpg",
-      "why": "Board-craft build. Still unvoted."
-    },
-    {
       "id": "blog-foxwell-attribution",
       "score": 7,
       "source": "blog",
@@ -144,30 +132,6 @@
       "time": "2026-06-07T11:00:00.000Z",
       "img": null,
       "why": "NEW SOURCE. Audience-segment mistakes in the Advantage+ era; applies to every account you run."
-    },
-    {
-      "id": "yt-aok3rDuRw8c",
-      "score": 7,
-      "source": "youtube",
-      "author": "Stomp It Tutorials",
-      "handle": "YouTube",
-      "text": "How to 180 on Skis | Common Mistakes",
-      "permalink": "https://www.youtube.com/watch?v=aok3rDuRw8c",
-      "time": "2026-06-05T17:00:00.000Z",
-      "img": "https://i.ytimg.com/vi/aok3rDuRw8c/hqdefault.jpg",
-      "why": "Ski tutorial, AU season opening. Still unvoted."
-    },
-    {
-      "id": "yt-a8O1iG96kTU",
-      "score": 7,
-      "source": "youtube",
-      "author": "SnowboardProCamp",
-      "handle": "YouTube",
-      "text": "How To Snowboard with More CONFIDENCE",
-      "permalink": "https://www.youtube.com/watch?v=a8O1iG96kTU",
-      "time": "2026-06-04T16:00:00.000Z",
-      "img": "https://i.ytimg.com/vi/a8O1iG96kTU/hqdefault.jpg",
-      "why": "Snowboard technique with substance. Still unvoted."
     }
   ]
 }
